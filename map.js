@@ -4,12 +4,12 @@ if (process.env.npm_package_name === 'pseudomap' &&
 
 if (typeof Map === 'function' && !process.env.TEST_PSEUDOMAP) {
   module.exports = Map
-  return
+}
+else {
+  module.export = PseudoMap
 }
 
 var hasOwnProperty = Object.prototype.hasOwnProperty
-
-module.exports = PseudoMap
 
 function PseudoMap (set) {
   if (!(this instanceof PseudoMap)) // whyyyyyyy
